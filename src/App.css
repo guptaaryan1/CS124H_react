@@ -1,168 +1,137 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* App.css */
+
+:root {
+  --primary-red: #e74c3c;
+  --secondary-blue: #3498db;
+  --white: #fff;
+  --black: #2c3e50;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-
-.game-container {
-  display: flex;
-  height: 100vh;
-  background-color: red; /* Red background */
-  color: white;
+body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: var(--black);
 }
 
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  width: 100%;
-}
-
-.settings-icon {
-  font-size: 24px;
-  cursor: pointer;
-  text-align: right;
-}
-
-.content {
-  flex: 1;
+.App {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
 }
 
-.game-title {
-  font-size: 48px;
-  margin-bottom: 20px;
+h1, h2 {
+  color: var(--primary-red);
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.play-button, .login-button {
-  background-color: darkblue;
-  color: white;
+/* Basic button styling */
+button {
+  background-color: var(--primary-red);
+  color: var(--white);
   border: none;
-  padding: 10px 20px;
-  font-size: 18px;
+  border-radius: 5px;
+  padding: 10px 15px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.play-button:hover, .login-button:hover {
-  background-color: navy;
+button:hover {
+  background-color: var(--secondary-blue);
 }
 
-.sidebar {
-  width: 200px;
-  background-color: darkblue; /* Dark blue sidebar */
-  color: white;
-  padding: 20px;
+/* Input fields */
+input {
+  border: 2px solid var(--secondary-blue);
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Category Buttons */
+.category-button {
+  background-color: var(--secondary-blue);
+  color: var(--white);
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.category-button:hover {
+  background-color: var(--primary-red);
+}
+
+/* Logos container */
+.logos-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
+}
+
+.logo-item {
   text-align: center;
 }
-.categories-container {
+
+.logo-item img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Difficulty Page */
+.difficulty-container {
   text-align: center;
-  color: white;
-  background-color: red; /* Red background */
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  padding: 40px;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .gear-icon {
-  font-size: 24px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  font-size: 30px;
+  color: var(--primary-red);
+  margin-bottom: 10px;
+}
+
+/* How to Play section */
+.how-to-play {
+  margin-top: 20px;
+  color: var(--secondary-blue);
   cursor: pointer;
+  text-decoration: underline;
 }
 
-h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
+.difficulty-button {
+  background-color: var(--primary-red);
+  color: var(--white);
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.categories-box {
-  background-color: #1a1a2e; /* Dark blue box */
-  border-radius: 10px;
-  padding: 20px;
-  width: 80%;
-  max-width: 400px;
+.difficulty-button:hover {
+  background-color: var(--secondary-blue);
 }
 
-.category-button {
-  background-color: #d3d3d3;
+.begin-button {
+  background-color: var(--secondary-blue);
+  color: var(--white);
+  padding: 15px 25px;
+  font-size: 20px;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px 0;
-  font-size: 1em;
   cursor: pointer;
-  width: 100%;
-  text-align: left;
+  transition: background-color 0.3s ease;
 }
 
-.create-category {
-  display: flex;
-  align-items: center;
-}
-
-.search-icon {
-  margin-right: 10px;
+.begin-button:hover {
+  background-color: var(--primary-red);
 }
